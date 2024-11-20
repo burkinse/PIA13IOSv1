@@ -9,16 +9,43 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack(spacing: 0) {
+            HStack(spacing: 0) {
+                Color.red
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                Color.green
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                Color.yellow
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
+            .frame(height: 200)
+
+            Color.gray
+                .frame(height: 120)
+            ZStack {
+                Color.blue
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                Rectangle()
+                    .fill(Color.white)
+                    .frame(width: 100, height: 100)
+                    .offset(y: -130)
+            }
+
+            HStack {
+                Spacer()
+                Color.black
+                    .frame(width: 50, height: 50) .padding(40) 
+            }
+            .frame(height: 120)
+            .background(Color.red)
         }
-        .padding()
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
+
