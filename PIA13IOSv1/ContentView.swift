@@ -36,7 +36,7 @@ struct ContentView: View {
                 Color.black
                     .frame(width: 50, height: 50) .padding(40) 
             }
-            .frame(height: 120)
+            .frame(height: 130)
             .background(Color.red)
         }
         .edgesIgnoringSafeArea(.all)
